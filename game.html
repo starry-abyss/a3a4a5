@@ -1,0 +1,68 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>A3, A4, A5</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="outerContainer">
+        <h3 class="written-in-ink"><a href="https://www.inklestudios.com/ink">WRITTEN IN INK</a></h3>
+        <h3><center><p id="demo"></p></center></h3>
+        <div id="story" class="container">
+            <div class="header">
+                
+                <!-- <h1>A3, A4, A5</h1> -->
+                <h2 class="byline"></h2>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date().getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = now - countDownDate;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = "Пробная версия игры. Играли: " + minutes + " минут.";
+
+  // If the count down is finished, write some text
+  if (minutes >= 19) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML += "<br>Пожалуйста, зарегистрируйтесь.";
+  }
+}, 1000);
+</script>
+
+<p>Музончик:</p>
+<audio controls autoplay loop>
+  <source src="music/music2.ogg" type="audio/ogg">
+  <embed src="music/music2.ogg" autostart="true" loop="true" hidden="true"> 
+</audio>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="ink.js"></script>
+    <script src="paper.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
