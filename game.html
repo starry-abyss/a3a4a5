@@ -14,7 +14,8 @@
 <body>
     <div class="outerContainer">
         <h3 class="written-in-ink"><a href="https://www.inklestudios.com/ink">WRITTEN IN INK</a></h3>
-        <h3><center><p id="demo"></p></center></h3>
+
+        <h4><center><p id="demo"></p></center></h4>
         <div id="story" class="container">
             <div class="header">
                 
@@ -41,7 +42,7 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = "Пробная версия игры. Играли: " + minutes + " минут.";
+  document.getElementById("demo").innerHTML = "Пробная версия игры. Играли: " + minutes + " мин.";
 
   // If the count down is finished, write some text
   if (minutes >= 19) {
